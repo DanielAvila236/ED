@@ -75,5 +75,6 @@ int main()
 	imprime(v1);
 	imprime(v2);
 	system("pause");
+]
 	system("cls");
 
