@@ -1,0 +1,70 @@
+#include <iostream>
+#include <cmath> // Para usar la función sqrt()
+using namespace std;
+
+// Prototipos de la función calculaArea
+double calculaCuadrado(double lado); // cuadrado
+double calculaRectangulo(double base, double altura); // rectángulo
+double calculaCirculo(double radio); // círculo
+double calculaAreaTraingulo(double lado); // triángulo equilátero
+// Definiciones de las funciones calculaArea
+double calculaCuadrado(double lado) { // cuadrado
+    return lado * lado;
+}
+
+double calculaRectangulo(double base, double altura) { // rectángulo
+    return base * altura;
+}
+
+double calculaCirculo(double radio)
+{ // círculo
+    return M_PI * radio * radio;
+}
+
+double calculaAreaTraingulo(double lado) { // triángulo equilátero
+    return (sqrt(3) / 4) * lado * lado;
+}
+
+
+int main() {
+    int opcion;
+    cout << "Seleccione la figura para calcular el área:\n";
+    cout << "1. Cuadrado\n2. Rectángulo\n3. Círculo\n4. Triángulo equilátero\n";
+    cout << "Opción: ";
+    cin >> opcion;
+
+    switch(opcion) {
+        case 1: {
+            double lado;
+            cout << "Ingrese el lado del cuadrado: ";
+            cin >> lado;
+            cout << "Área del cuadrado: " << calculaCuadrado(lado) << " unidades cuadradas" << endl;
+            break;
+        }
+        case 2: {
+            double base, altura;
+            cout << "Ingrese la base y altura del rectángulo: ";
+            cin >> base >> altura;
+            cout << "Área del rectángulo: " << calculaRectangulo(base, altura) << " unidades cuadradas" << endl;
+            break;
+        }
+        case 3: {
+            double radio;
+            cout << "Ingrese el radio del círculo: ";
+            cin >> radio;
+            cout << "Área del círculo: " << calculaCirculo(radio) << " unidades cuadradas" << endl;
+            break;
+        }
+        case 4: {
+            double lado;
+            cout << "Ingrese el lado del triángulo equilátero: ";
+            cin >> lado;
+            cout << "Área del triángulo equilátero: " << calculaAreaTraingulo(lado) << " unidades cuadradas" << endl;
+            break;
+        }
+        default:
+            cout << "Opción no válida." << endl;
+    }
+    return 0;
+}
+
