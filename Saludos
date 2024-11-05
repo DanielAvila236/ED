@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int suma1 = 0; 
+int saludost = 0;
+
+int saludos(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        saludost = saludos(n - 1) + (n - 1);
+    }
+    return saludost;
+}
+int main()
+{
+    cout << "resultado en main()" << saludos(1000) << endl;
+    
+}
