@@ -20,3 +20,4 @@ int main()
     cout << "resultado en main()" << saludos(1000) << endl;
     
 }
+//sirve para mi practicario 
